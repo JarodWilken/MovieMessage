@@ -35,44 +35,23 @@
             android:layout_height="wrap_content"
             android:text="Rate the movie (1 = low, 5 = high): " />
 
-        <RadioGroup
+        <Spinner
+            android:id="@+id/spinnerStar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
 
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="1 star" />
+        <Button
+            android:id="@+id/buttonSaveMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Movie" />
 
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2 star" />
+        <Button
+            android:id="@+id/buttonReturn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go Back to Homescreen" />
 
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3 star" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4 star" />
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5 star" />
-        </RadioGroup>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

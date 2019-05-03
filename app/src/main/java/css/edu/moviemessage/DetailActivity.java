@@ -40,5 +40,17 @@ public class DetailActivity extends AppCompatActivity {
                 startActivity(mainActIntent);
             }
         });
+
+        buttonSaveMovie.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                String movieTitle = editTextMovieName.getText().toString();
+                int star = ((Spinner)findViewById(R.id.spinnerStar)).getSelectedItemPosition();
+                movieDataSource.createMovie(movieTitle, star);
+                Intent mainActIntent = new Intent(view.getContext(), MainActivity.class);
+                finish();
+                startActivity(mainActIntent);
+            }
+        });
     }
 }

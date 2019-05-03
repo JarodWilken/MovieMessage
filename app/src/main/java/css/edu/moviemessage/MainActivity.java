@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d("CIS3334", "Starting onDataChange()");        // debugging log
-                movieList = movieDataSource.getAllFish(dataSnapshot);
-                // Instantiate a custom adapter for displaying each fish
+                movieList = movieDataSource.getAllMovie(dataSnapshot);
+                // Instantiate a custom adapter for displaying each movie
                 movieAdapter = new movieAdapter(MainActivity.this, android.R.layout.simple_list_item_single_choice, movieList);
                 // Apply the adapter to the list
                 listViewMovie.setAdapter(movieAdapter);
             }
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(databaseError databaseError) {
                 Log.d("CIS3334", "onCancelled: ");
             }
         });

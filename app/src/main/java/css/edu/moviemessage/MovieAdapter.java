@@ -10,4 +10,11 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
     private List<Movie> movieList;
     private Context context;
     private int layoutResource;
+
+    public MovieAdapter(Context context, int resource, List<Movie> movieList) {
+        super(context, resource, movieList);
+        this.context = context;
+        this.layoutResource = resource;
+        this.movieList = movieList;
+    }
 }
